@@ -13,6 +13,7 @@
 NSString *const kUsername = @"kUsername";
 NSString *const kPassword = @"kPassword";
 
+
 @interface GGKeyChainManager ()
 @property (nonatomic, strong)UICKeyChainStore *keychainItem;
 @end
@@ -52,7 +53,8 @@ NSString *const kPassword = @"kPassword";
 
 
 - (void)clear{
-
+    [self.keychainItem removeItemForKey:kUsername];
+    [self.keychainItem removeItemForKey:kPassword];
 }
 
 
