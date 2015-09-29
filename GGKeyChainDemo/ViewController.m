@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
+#import "GGKeyChainManager.h"
+@interface ViewController ()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
 
 @end
 
@@ -17,11 +19,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSString *username = [GGKeyChainManager sharedInstance].username;
+    NSString *password = [GGKeyChainManager sharedInstance].password;
+    
+    NSLog(@"%@ %@",username,password);
+    self.usernameField.text = username;
+    self.passwordField.text = password;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    NSLog(@"%@",textField.text);
+    [[GGKeyChainManager sharedInstance] setUsername:self.usernameField.text password:self.passwordField.text];
+    
+    return YES;
+}
+
+
+
 
 @end

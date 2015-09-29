@@ -15,6 +15,10 @@
 		6323DAC81BBA952A00949C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6323DAC61BBA952A00949C84 /* LaunchScreen.storyboard */; };
 		6323DAD31BBA952A00949C84 /* GGKeyChainDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6323DAD21BBA952A00949C84 /* GGKeyChainDemoTests.m */; };
 		6323DADE1BBA952A00949C84 /* GGKeyChainDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6323DADD1BBA952A00949C84 /* GGKeyChainDemoUITests.m */; };
+		6323DAEE1BBA953F00949C84 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6323DAED1BBA953F00949C84 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6323DAF01BBA954C00949C84 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6323DAEF1BBA954C00949C84 /* Security.framework */; };
+		6323DAF31BBA990400949C84 /* GGKeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6323DAF21BBA990400949C84 /* GGKeyChainManager.m */; settings = {ASSET_TAGS = (); }; };
+		D307FBCC6D30EE0414851E7F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCEA0FE61597E61771A7CCF /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B700CA78B0A480602A68676 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6323DAB51BBA952A00949C84 /* GGKeyChainDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGKeyChainDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6323DAB91BBA952A00949C84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6323DABB1BBA952A00949C84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +56,13 @@
 		6323DAD91BBA952A00949C84 /* GGKeyChainDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGKeyChainDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6323DADD1BBA952A00949C84 /* GGKeyChainDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGKeyChainDemoUITests.m; sourceTree = "<group>"; };
 		6323DADF1BBA952A00949C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6323DAEC1BBA953F00949C84 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		6323DAED1BBA953F00949C84 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		6323DAEF1BBA954C00949C84 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6323DAF11BBA990400949C84 /* GGKeyChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGKeyChainManager.h; sourceTree = "<group>"; };
+		6323DAF21BBA990400949C84 /* GGKeyChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGKeyChainManager.m; sourceTree = "<group>"; };
+		8CCEA0FE61597E61771A7CCF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3A8D81D75A1AD50C4F1FB8A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6323DAF01BBA954C00949C84 /* Security.framework in Frameworks */,
+				D307FBCC6D30EE0414851E7F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +95,13 @@
 		6323DAAC1BBA952A00949C84 = {
 			isa = PBXGroup;
 			children = (
+				6323DAEF1BBA954C00949C84 /* Security.framework */,
 				6323DAB71BBA952A00949C84 /* GGKeyChainDemo */,
 				6323DAD11BBA952A00949C84 /* GGKeyChainDemoTests */,
 				6323DADC1BBA952A00949C84 /* GGKeyChainDemoUITests */,
 				6323DAB61BBA952A00949C84 /* Products */,
+				C606086B24EF869BC9EC2912 /* Pods */,
+				D8ECB56F4B2FD39BADF7B390 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +118,7 @@
 		6323DAB71BBA952A00949C84 /* GGKeyChainDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6323DAEB1BBA952E00949C84 /* KeyChain */,
 				6323DABB1BBA952A00949C84 /* AppDelegate.h */,
 				6323DABC1BBA952A00949C84 /* AppDelegate.m */,
 				6323DABE1BBA952A00949C84 /* ViewController.h */,
@@ -140,6 +158,34 @@
 			path = GGKeyChainDemoUITests;
 			sourceTree = "<group>";
 		};
+		6323DAEB1BBA952E00949C84 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				6323DAEC1BBA953F00949C84 /* KeychainItemWrapper.h */,
+				6323DAED1BBA953F00949C84 /* KeychainItemWrapper.m */,
+				6323DAF11BBA990400949C84 /* GGKeyChainManager.h */,
+				6323DAF21BBA990400949C84 /* GGKeyChainManager.m */,
+			);
+			name = KeyChain;
+			sourceTree = "<group>";
+		};
+		C606086B24EF869BC9EC2912 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3A8D81D75A1AD50C4F1FB8A /* Pods.debug.xcconfig */,
+				5B700CA78B0A480602A68676 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D8ECB56F4B2FD39BADF7B390 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CCEA0FE61597E61771A7CCF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6323DAE21BBA952A00949C84 /* Build configuration list for PBXNativeTarget "GGKeyChainDemo" */;
 			buildPhases = (
+				B136CFF7226975A9E6809801 /* Check Pods Manifest.lock */,
 				6323DAB11BBA952A00949C84 /* Sources */,
 				6323DAB21BBA952A00949C84 /* Frameworks */,
 				6323DAB31BBA952A00949C84 /* Resources */,
+				0D1B463DAF462240CE62E66F /* Embed Pods Frameworks */,
+				C06CA6B758E11F5EDA3EFAC2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,12 +314,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D1B463DAF462240CE62E66F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B136CFF7226975A9E6809801 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C06CA6B758E11F5EDA3EFAC2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6323DAB11BBA952A00949C84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6323DAEE1BBA953F00949C84 /* KeychainItemWrapper.m in Sources */,
 				6323DAC01BBA952A00949C84 /* ViewController.m in Sources */,
+				6323DAF31BBA990400949C84 /* GGKeyChainManager.m in Sources */,
 				6323DABD1BBA952A00949C84 /* AppDelegate.m in Sources */,
 				6323DABA1BBA952A00949C84 /* main.m in Sources */,
 			);
@@ -411,9 +510,11 @@
 		};
 		6323DAE31BBA952A00949C84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3A8D81D75A1AD50C4F1FB8A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GGKeyChainDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Otherplayer.GGKeyChainDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,9 +523,11 @@
 		};
 		6323DAE41BBA952A00949C84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B700CA78B0A480602A68676 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GGKeyChainDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Otherplayer.GGKeyChainDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +601,7 @@
 				6323DAE41BBA952A00949C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6323DAE51BBA952A00949C84 /* Build configuration list for PBXNativeTarget "GGKeyChainDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +610,7 @@
 				6323DAE71BBA952A00949C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6323DAE81BBA952A00949C84 /* Build configuration list for PBXNativeTarget "GGKeyChainDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +619,7 @@
 				6323DAEA1BBA952A00949C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
